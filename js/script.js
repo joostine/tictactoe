@@ -1,9 +1,40 @@
+let currentPlayer = 1;
+let totalOfTurns = 0;
+let endGame = false;
 
+function changeText(X, O) {
+  return X;
+  return O;
+}
 
+let counter = 1;
+function performLogic(button, tile) {
+  if(counter % 2 == 0) {
+    $(tile).text('X');
+  } else {
+    $(tile).text('O');
+  }
+  counter = counter + 1;
+  playerWin();
+}
+/*function playerWin() {
+  if (checkHorizontal() || checkVeritcal() || checkDiagonal()) {
+    return true; 
+  } else {
+    return false;
+  }
 
+/*function checkHorizontal() {
 
+}
 
+function checkVerical() {
+  
+}
 
+function checkDiagonal() {
+  
+}*/
 
 $("#button1").click(function() {
     performLogic("#button1","#tile1");
@@ -40,4 +71,3 @@ $("#button8").click(function() {
 $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
-
